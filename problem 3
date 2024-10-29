@@ -1,1 +1,13 @@
+def is_prime(n):
+    # Check if the number is less than 2, which are not prime numbers
+    if n < 2:
+        return False
+    # Only need to check up to the square root of n for factors
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+print(is_prime(11))  # Output: True
+print(is_prime(15))  # Output: False
 
